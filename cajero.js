@@ -1,6 +1,5 @@
 const prompt = require('prompt-sync')();
 
-//let nombre = prompt("¿Cuál es tu nombre? ");
 let numero1;
 let numero2;
 let operacion;
