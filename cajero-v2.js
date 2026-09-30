@@ -1,5 +1,26 @@
 const prompt = require('prompt-sync')();
 
+function pedirNumero(mensaje) {
+    let entrada = prompt(mensaje);
+    return Number(entrada);
+}
+
+function calcular(numero1, operacion, numero2) {
+    if (operacion === "+") {
+        return numero1 + numero2;
+    } else if (operacion === "-") {
+        return numero1 - numero2;
+    } else if (operacion === "*") {
+        return numero1 * numero2;
+    } else if (operacion === "/") {
+        if (numero2 === 0) {
+            return "No se puede dividir entre 0 :(";
+        }
+        return numero1 / numero2;
+    } else {
+        return "Operación no válida";
+    }
+}
 let activo = true;
 
 
@@ -42,3 +63,4 @@ if(operacion="+"){
 }
 }
 }
+
